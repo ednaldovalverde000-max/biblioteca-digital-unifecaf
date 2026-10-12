@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+header {
+    background-color: #0B2A4A;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #39B54A;
+}
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+   ============================== */
+
+.hero {
+    background: linear-gradient(135deg, #0B2A4A, #4f8fc9);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #39B54A;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* ==============================
+   BUSCA
+   ============================== */
+
+.busca {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5f7fa;
+}
+
+.busca h2 {
+    color: #1769aa;
+    margin-bottom: 20px;
+}
+
+.busca input {
+    width: 50%;
+    max-width: 500px;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.busca button {
+    padding: 14px 22px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1769aa;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.busca button:hover {
+    background-color: #12558a;
+}
+
+
+/* ==============================
+   ACERVO
+   ============================== */
+
+.acervo {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.acervo h2 {
+    color: #1769aa;
+    margin-bottom: 10px;
+}
+
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.categoria {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.categoria h3 {
+    color: #1769aa;
+    margin-bottom: 10px;
+}
+
+.titulo-destaque {
+    margin-top: 60px;
+}
+
+
+/* ==============================
+   LIVROS
+   ============================== */
+
+.livros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.livro {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.capa {
+    width: 100%;
+    height: 260px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.livro h3 {
+    color: #1769aa;
+}
+
+
+/* ==============================
+   SOBRE
+   ============================== */
+
+.sobre {
+    background-color: #f5f7fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sobre p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   CONTATO
+   ============================== */
+
+.contato {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contato h2 {
+    color: #1769aa;
+}
+
+
+/* ==============================
+   RODAPÉ
+   ============================== */
+
+footer {
+    background-color: #1769aa;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 90%;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .busca input {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .busca button {
+        margin-left: 0;
+    }
+
+    .categorias {
+        grid-template-columns: 1fr;
+    }
+
+    .livros {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* AJUSTE DAS CAPAS DOS LIVROS */
+
+.livro {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.capa {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.capa img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+/* RESPONSIVIDADE PARA CELULAR */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .busca {
+        padding: 40px 20px;
+    }
+
+    .busca input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .busca button {
+        width: 100%;
+    }
+
+    .categorias {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .livros {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .livro {
+        width: 100%;
+    }
+
+    .capa {
+        height: 355px;
+    }
+
+    .sobre,
+    .contato {
+        padding: 50px 20px;
+    }
+
+    footer {
+        padding: 25px 15px;
+        text-align: center;
+    }
+}
